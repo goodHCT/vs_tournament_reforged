@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "L L",
+    "SSS"
+  ],
+  "key": {
+    "L": {
+      "tag": "minecraft:planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "vs_tournament:flap",
+    "count": 4
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        "   ",
+        "iFi"
+    ],
+    "key": {
+        "i": {
+            "item": "minecraft:cobblestone"
+        },
+        "F": {
+            "item": "vs_tournament:dampened_gunpowder"
+        }
+    },
+    "result": {
+        "item": "vs_tournament:tiny_thruster",
+        "count": 1
+    }
+}

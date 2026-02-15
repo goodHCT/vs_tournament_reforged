@@ -1,0 +1,6 @@
+{
+  "parent": "vs_tournament:block/custom_thruster",
+  "textures": {
+    "layer0": "vs_tournament:block/thruster/thruster9"
+  }
+}

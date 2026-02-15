@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "vs_tournament:block/obsidian_seat"
+    },
+    "facing=south": {
+      "model": "vs_tournament:block/obsidian_seat",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "vs_tournament:block/obsidian_seat",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "vs_tournament:block/obsidian_seat",
+      "y": 90
+    }
+  }
+}

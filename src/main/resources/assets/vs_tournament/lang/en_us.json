@@ -1,0 +1,38 @@
+{
+  "block.vs_tournament.ballast": "Ballast",
+  "block.vs_tournament.balloon": "Balloon",
+  "block.vs_tournament.powered_balloon": "Powered Balloon",
+  "block.vs_tournament.spinner": "Spinner",
+  "block.vs_tournament.thruster": "Thruster",
+  "block.vs_tournament.tiny_thruster": "Tiny Thruster",
+  "block.vs_tournament.seat": "Lightweight Seat",
+  "block.vs_tournament.sensor": "Distance Sensor",
+  "block.vs_tournament.floater": "Floater",
+  "block.vs_tournament.prop_big": "Propeller (big)",
+  "block.vs_tournament.prop_small": "Propeller (small)",
+  "block.vs_tournament.flap": "Tournament Flap",
+
+  "chat.vs_tournament.delete_wand.deleted": "Deleted ship!",
+  "itemGroup.vs_tournament.main_tab": "VS Tournament",
+  
+  "block.vs_tournament.explosive_instant_small": "Instant Explosive (small)",
+  "block.vs_tournament.explosive_instant_medium": "Instant Explosive (medium)",
+  "block.vs_tournament.explosive_instant_large": "Instant Explosive (large)",
+
+  "block.vs_tournament.custom_thruster": "Custom Thruster",
+  
+  "block.vs_tournament.custom_spinner": "Custom Spinner",
+  "block.vs_tournament.six_way_thruster": "Six-Way Thruster",
+  "block.vs_tournament.six_way_spinner": "Six-Way Spinner",
+  "block.vs_tournament.obsidian_seat": "Explosion-Resistant Seat",
+
+  "item.vs_tournament.pulse_gun": "Pulse Gun",
+  "item.vs_tournament.suction_gun": "Suction Gun",
+  "item.vs_tournament.grab_gun": "Grab Gun",
+  "item.vs_tournament.delete_wand": "Deleting Tool",
+  "item.vs_tournament.baishi_education": "Tutorial Item",
+  "item.vs_tournament.upgrade_thruster": "Thruster Upgrade",
+  "item.vs_tournament.dampened_gunpowder": "Dampened Gunpowder",
+  "item.vs_tournament.deprecated_propeller.tooltip": "Deprecated: Use thrusters instead",
+  "item.vs_tournament.nbt.tooltip": "Configurable NBT parameters"
+}

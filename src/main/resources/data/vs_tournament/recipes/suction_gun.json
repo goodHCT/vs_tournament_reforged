@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "D#D",
+        " / ",
+        " / "
+    ],
+    "key": {
+        "#": {
+            "item": "vs_tournament:spinner"
+        },
+        "/": {
+            "item": "minecraft:stick"
+        },
+        "D": {
+            "item": "vs_tournament:dampened_gunpowder"
+        }
+    },
+    "result": {
+        "item": "vs_tournament:suction_gun",
+        "count": 1
+    }
+}

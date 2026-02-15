@@ -1,0 +1,37 @@
+{
+  "block.vs_tournament.ballast": "压载",
+  "block.vs_tournament.balloon": "气球",
+  "block.vs_tournament.powered_balloon": "动力气球",
+  "block.vs_tournament.spinner": "旋转器",
+  "block.vs_tournament.thruster": "推进器",
+  "block.vs_tournament.tiny_thruster": "小型推进器",
+  "block.vs_tournament.seat": "超轻坐垫",
+  "block.vs_tournament.sensor": "距离传感器",
+  "block.vs_tournament.floater": "浮子",
+  "block.vs_tournament.prop_big": "螺旋桨（大型）",
+  "block.vs_tournament.prop_small": "螺旋桨（小型）",
+  "block.vs_tournament.flap": "竞赛襟翼",
+
+  "itemGroup.vs_tournament.main_tab": "瓦尔基里天空 竞赛",
+  
+  "block.vs_tournament.explosive_instant_small": "瞬炸炸药 （小型）",
+  "block.vs_tournament.explosive_instant_medium": "瞬炸炸药 （中型）",
+  "block.vs_tournament.explosive_instant_large": "瞬炸炸药 （大型）",
+
+  "block.vs_tournament.custom_thruster": "自定义推进器",
+  
+  "block.vs_tournament.custom_spinner": "自定义旋转器",
+  "block.vs_tournament.six_way_thruster": "六向推进器",
+  "block.vs_tournament.six_way_spinner": "六向旋转器",
+  "block.vs_tournament.obsidian_seat": "防爆坐垫",
+
+  "item.vs_tournament.pulse_gun": "脉冲喷枪",
+  "item.vs_tournament.suction_gun": "老君葫芦",
+  "item.vs_tournament.grab_gun": "抓钩枪",
+  "item.vs_tournament.delete_wand": "删除工具",
+  "item.vs_tournament.baishi_education": "百时教育",
+  "item.vs_tournament.upgrade_thruster": "推进器升级",
+  "item.vs_tournament.dampened_gunpowder": "受潮火药",
+  "item.vs_tournament.deprecated_propeller.tooltip": "已弃用：请使用推进器代替",
+  "item.vs_tournament.nbt.tooltip": "可调NBT参数"
+}

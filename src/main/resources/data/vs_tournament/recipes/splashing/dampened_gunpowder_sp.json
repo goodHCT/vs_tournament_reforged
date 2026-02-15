@@ -1,0 +1,14 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "item": "minecraft:gunpowder"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "item": "vs_tournament:dampened_gunpowder"
+    }
+  ]
+}

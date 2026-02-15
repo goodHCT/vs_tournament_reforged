@@ -1,0 +1,88 @@
+package org.valkyrienskies.tournament.items
+
+import net.minecraft.ResourceLocationException
+import net.minecraft.Util
+import net.minecraft.core.BlockPos
+import net.minecraft.resources.ResourceLocation
+import net.minecraft.server.level.ServerLevel
+import net.minecraft.util.Mth
+import net.minecraft.world.InteractionHand
+import net.minecraft.world.InteractionResultHolder
+import net.minecraft.world.entity.player.Player
+import net.minecraft.world.item.Item
+import net.minecraft.world.item.ItemStack
+import net.minecraft.world.level.Level
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockRotProcessor
+import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings
+import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate
+import java.util.*
+
+class ShipSpawnerItem : Item(
+    Properties().stacksTo(1)
+) {
+
+    private val integrity = 0.5f
+    private lateinit var structure : ResourceLocation
+
+    override fun use(level: Level, player: Player, usedHand: InteractionHand): InteractionResultHolder<ItemStack> {
+        if (player.isCrouching) {
+            if (level.isClientSide) {
+                return InteractionResultHolder.pass(player.getItemInHand(usedHand))
+            }
+            if (level !is ServerLevel) {
+                return InteractionResultHolder.pass(player.getItemInHand(usedHand))
+            }
+
+            
+        }
+
+        if (this::structure.isInitialized) {
+            if (level.isClientSide) {
+                return InteractionResultHolder.pass(player.getItemInHand(usedHand))
+            }
+
+            if (level !is ServerLevel) {
+                return InteractionResultHolder.pass(player.getItemInHand(usedHand))
+            }
+
+            val pos = player.blockPosition()
+
+            return try {
+                loadStructure(
+                    level,
+                    pos,
+                    level.structureManager.get(this.structure).get()
+                )
+                InteractionResultHolder.pass(player.getItemInHand(usedHand))
+            } catch (var6: ResourceLocationException) {
+                println("couldn't find structure: $structure")
+                InteractionResultHolder.fail(player.getItemInHand(usedHand))
+            }
+        }
+        println("structure not set!")
+        return InteractionResultHolder.fail(player.getItemInHand(usedHand))
+    }
+
+    fun loadStructure(level: ServerLevel, pos: BlockPos, structureTemplate: StructureTemplate): Boolean {
+        val structurePlaceSettings = StructurePlaceSettings()
+        if (this.integrity < 1.0f) {
+            structurePlaceSettings.clearProcessors()
+                .addProcessor(BlockRotProcessor(Mth.clamp(this.integrity, 0.0f, 1.0f)))
+                .setRandom(level.random)
+        }
+        structureTemplate.placeInWorld(
+            level,
+            pos,
+            pos,
+            structurePlaceSettings,
+            level.random,
+            2
+        )
+        return true
+    }
+
+    private fun createRandom(seed: Long): Random {
+        return if (seed == 0L) Random(Util.getMillis()) else Random(seed)
+    }
+
+}

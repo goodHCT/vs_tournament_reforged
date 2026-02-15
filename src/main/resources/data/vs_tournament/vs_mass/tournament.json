@@ -1,0 +1,64 @@
+[
+  {
+    "block": "vs_tournament:spinner",
+    "mass": 900.0
+  },
+  {
+    "block": "vs_tournament:thruster",
+    "mass": 400.0
+  },
+  {
+    "block": "vs_tournament:tiny_thruster",
+    "mass": 300.0
+  },
+  {
+    "block": "vs_tournament:seat",
+    "mass": 5.0
+  },
+  {
+    "block": "vs_tournament:sensor",
+    "mass": 800.0
+  },
+  {
+    "block": "vs_tournament:floater",
+    "mass": 200.0
+  },
+  {
+    "block": "vs_tournament:prop_small",
+    "mass": 1200.0
+  },
+  {
+    "block": "vs_tournament:prop_big",
+    "mass": 5200.0
+  },
+  {
+    "tag": "vs_tournament:flaps",
+    "mass": 50.0
+  },
+  {
+    "tag": "vs_tournament:balloons",
+    "mass": 450.0,
+    "friction": 0.6,
+    "elasticity": 0.5
+  },
+  {
+    "tag": "vs_tournament:custom_thruster",
+    "mass": 400.0
+  },
+  {
+    "tag": "vs_tournament:custom_spinner",
+    "mass": 900.0
+  },
+  {
+    "tag": "vs_tournament:six_way_thruster",
+    "mass": 1000.0
+  },
+  {
+    "tag": "vs_tournament:six_way_spinner",
+    "mass": 1000.0
+  },
+  {
+    "tag": "vs_tournament:obsidian_seat",
+    "mass": 200.0
+  }
+]

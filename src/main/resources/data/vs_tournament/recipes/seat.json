@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        " # ",
+        " O "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:string"
+        },
+        "O": {
+            "tag": "minecraft:wooden_pressure_plates"
+        }
+    },
+    "result": {
+        "item": "vs_tournament:seat",
+        "count": 1
+    }
+}

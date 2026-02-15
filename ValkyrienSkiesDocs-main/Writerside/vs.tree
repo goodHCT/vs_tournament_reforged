@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="vs"
+                 name="Valkyrien Skies"
+                 start-page="Section-Starting-Page.topic">
+
+    <toc-element topic="Section-Starting-Page.topic"/>
+    <toc-element toc-title="How to guides">
+        <toc-element toc-title="Attachments">
+            <toc-element topic="How-to-migrate-an-attachment.md"/>
+        </toc-element>
+        <toc-element toc-title="Setup">
+            <toc-element topic="How-to-add-Valkyrien-Skies-to-your-dev-environment.md"/>
+            <toc-element topic="How-to-install-the-prerequisites-for-addon-development-on-Windows.md"/>
+        </toc-element>
+        <toc-element toc-title="Ships">
+            <toc-element topic="How-to-get-a-ship.md"/>
+            <toc-element topic="How-to-transform-coordinates-from-shipyard-to-world.md"/>
+            <toc-element topic="How-to-assemble-a-ship.md"/>
+            <toc-element topic="How-to-disassemble-a-ship.md"/>
+            <toc-element topic="How-to-teleport-a-ship.md"/>
+        </toc-element>
+    </toc-element>
+    <toc-element toc-title="Tutorials">
+        <toc-element topic="Develop-your-first-addon.md"/>
+    </toc-element>
+    <toc-element toc-title="Concepts">
+        <toc-element topic="PhysLevels.md"/>
+        <toc-element topic="Coordinate-Spaces.md"/>
+        <toc-element topic="Ships.md"/>
+        <toc-element topic="Bodies.md"/>
+        <toc-element topic="Forces-and-Torques.md"/>
+        <toc-element topic="Kinematic-Control.md"/>
+        <toc-element topic="Joints.md"/>
+        <toc-element topic="The-Shipyard.md"/>
+        <toc-element topic="The-Attachment-System-Explained.md"/>
+    </toc-element>
+    <toc-element toc-title="Release notes">
+        <toc-element topic="What-s-new-in-VS-2-4.md"/>
+        <toc-element toc-title="Migration guides">
+            <toc-element topic="How-to-migrate-to-VS-2.4.md"/>
+        </toc-element>
+    </toc-element>
+    <toc-element toc-title="TODO">
+        <toc-element topic="Compatibility.md"/>
+        <toc-element topic="Dependency-Architecture.md"/>
+        <toc-element topic="How-Valkyrien-Skies-Works-From-a-Birds-Eye.md"/>
+        <toc-element topic="starter.md"/>
+    </toc-element>
+    <toc-element toc-title="API reference" href="#"/>
+    <toc-element toc-title="Community Wiki" href="https://wiki.valkyrienskies.org/wiki/Main_Page"/>
+</instance-profile>

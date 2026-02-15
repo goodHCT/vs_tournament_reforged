@@ -1,0 +1,126 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'net.minecraftforge.gradle' version '[6.0,6.2)'
+    id 'org.jetbrains.kotlin.jvm' version '2.0.0'
+}
+
+version = mod_version
+group = maven_group
+base {
+    archivesName = archives_base_name
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+minecraft {
+    mappings channel: 'official', version: '1.20.1'
+    copyIdeResources = true
+
+    runs {
+        client {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            mods {
+                "${archives_base_name}" {
+                    source sourceSets.main
+                }
+            }
+        }
+        server {
+            workingDirectory project.file('run')
+            property 'forge.logging.markers', 'REGISTRIES'
+            property 'forge.logging.console.level', 'debug'
+            mods {
+                "${archives_base_name}" {
+                    source sourceSets.main
+                }
+            }
+        }
+    }
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        name = "Architectury"
+        url = "https://maven.architectury.dev"
+    }
+    mavenCentral()
+
+    // 【关键修复】安全地处理可能为空的 vs_maven_url
+    maven {
+        name = "Valkyrien Skies Internal"
+        // 只有当属性存在且非空非空白时才使用，否则使用默认URL
+        def vsUrl = project.findProperty('vs_maven_url')?.toString()?.trim()
+        url = (vsUrl && !vsUrl.isEmpty()) ? vsUrl : 'https://maven.valkyrienskies.org'
+        if (project.hasProperty('vs_maven_username') && project.hasProperty('vs_maven_password')) {
+            credentials {
+                username project.vs_maven_username
+                password project.vs_maven_password
+            }
+        }
+    }
+    maven {
+        name = 'Kotlin for Forge'
+        url = 'https://thedarkcolour.github.io/KotlinForForge/'
+    }
+}
+
+dependencies {
+    minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    implementation fg.deobf("thedarkcolour:kotlinforforge:${kotlin_forge}")
+    implementation fg.deobf("org.valkyrienskies:valkyrienskies-120-forge:${vs2_version}")
+    implementation("org.valkyrienskies.core:api:${vscore_version}")
+    implementation("org.valkyrienskies.core:util:${vscore_version}")
+    implementation("org.valkyrienskies.core:internal:${vscore_version}")
+    compileOnly("org.joml:joml:1.10.4")
+    compileOnly("org.joml:joml-primitives:1.10.0")
+}
+
+tasks.named('processResources', ProcessResources).configure {
+    var replaceProperties = [
+            minecraft_version: minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            forge_version: forge_version,
+            forge_version_range: forge_version_range,
+            loader_version_range: loader_version_range,
+            mod_id: mod_id,
+            mod_name: mod_name,
+            mod_license: mod_license,
+            mod_version: mod_version,
+            mod_authors: mod_authors,
+            mod_description: mod_description,
+    ]
+    inputs.properties replaceProperties
+    filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
+        expand replaceProperties
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        jvmTarget = "17"
+        freeCompilerArgs += "-Xjvm-default=all"
+    }
+}
+
+tasks.named('jar', Jar).configure {
+    manifest {
+        attributes([
+                'Specification-Title'     : mod_id,
+                'Specification-Vendor'    : mod_authors,
+                'Specification-Version'   : '1',
+                'Implementation-Title'    : project.name,
+                'Implementation-Version'  : project.jar.archiveVersion,
+                'Implementation-Vendor'   : mod_authors,
+                'Implementation-Timestamp': new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+        ])
+    }
+    finalizedBy 'reobfJar'
+}

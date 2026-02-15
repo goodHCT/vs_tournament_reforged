@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "   ",
+        " # ",
+        " O "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:dried_kelp"
+        },
+        "O": {
+            "item": "minecraft:obsidian"
+        }
+    },
+    "result": {
+        "item": "vs_tournament:obsidian_seat",
+        "count": 1
+    }
+}

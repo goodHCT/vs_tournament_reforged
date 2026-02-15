@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X X",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "vs_tournament:dampened_gunpowder"
+    }
+  },
+  "result": {
+    "item": "vs_tournament:baishi_education",
+    "count": 1
+  }
+}

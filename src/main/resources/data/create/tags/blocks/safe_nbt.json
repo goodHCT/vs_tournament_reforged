@@ -1,0 +1,9 @@
+{
+  "values": [
+    "vs_tournament:six_way_thruster",
+	"vs_tournament:six_way_spinner",
+    "vs_tournament:custom_thruster",
+	"vs_tournament:custom_spinner",
+    "vs_tournament:flap"
+  ]
+}

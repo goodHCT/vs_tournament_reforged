@@ -1,0 +1,7 @@
+{
+  "parent": "vs_tournament:block/flap",
+  "textures": {
+    "0": "vs_tournament:block/flap",
+    "particle": "vs_ctournament:block/flap"
+  }
+}

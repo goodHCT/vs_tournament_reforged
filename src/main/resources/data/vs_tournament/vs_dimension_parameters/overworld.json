@@ -1,0 +1,7 @@
+{
+  "dimensionId": "minecraft:dimension:minecraft:overworld",
+  "maxYPos": 2147483647,
+  "seaLevel": 62,
+  "gravity": [0.0, -10.0, 0.0],
+  "priority": 114514
+}

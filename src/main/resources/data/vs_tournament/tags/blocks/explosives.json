@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "vs_tournament:explosive_instant_large",
+    "vs_tournament:explosive_instant_medium",
+    "vs_tournament:explosive_instant_small"
+  ]
+}

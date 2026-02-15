@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="73add8ed">
+        <description>Created after removal of "Release notes" from Valkyrien Skies</description>
+        <accepts>Release-notes.html</accepts>
+    </rule>
+    <rule id="17b8bd4d">
+        <description>Created after removal of "How to transform shipyard coordinates to world coordinates" from
+            Valkyrien Skies
+        </description>
+        <accepts>How-to-transform-shipyard-coordinates-to-world-coordinates.html</accepts>
+    </rule>
+    <rule id="6768a62e">
+        <description>
+            <![CDATA[Created after removal of "<How-to-transform-positions-in-the-shipyard-to-the-world.md>" from Valkyrien Skies]]></description>
+        <accepts>How-to-transform-positions-in-the-shipyard-to-the-world.html</accepts>
+    </rule>
+    <rule id="29ec5805">
+        <description>Created after removal of "How to" from Valkyrien Skies</description>
+        <accepts>How-to.html</accepts>
+    </rule>
+    <rule id="4f27bac8">
+        <description>Created after removal of "How to start developing a Valkyrien Skies addon" from Valkyrien Skies
+        </description>
+        <accepts>How-to-start-developing-a-Valkyrien-Skies-addon.html</accepts>
+    </rule>
+    <rule id="32be5451">
+        <description>Created after removal of "Set up an addon development environment" from Valkyrien Skies
+        </description>
+        <accepts>Setup-an-addon-development-environment.html</accepts>
+    </rule>
+</rules>
